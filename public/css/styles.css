@@ -22,11 +22,12 @@ p {
 .top-header {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     padding: 2%;
 }
 
-.top-header p {
-    width: 100%;
+.pago {
     text-align: center;
     margin-top: 10px;
 }
@@ -35,53 +36,53 @@ header {
     background-color: #EAC926;
 }
 
-header div.logo,
-.buscar {
+.logo {
     width: 50%;
-}
-
-header div.logo {
     padding: 10px;
 }
 
-.buscar {
+.buscador {
     display: flex;
     align-items: center;
+    width: 50%;
 }
 
 .barra {
-    border-radius: 5px;
+    width: 90%;
+    border: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0 0.5rem;
     height: 30px;
 }
 
 .submit {
+    width: 10%;
     background-color: #FFF;
     color: #666;
-    border-radius: 5px;
+    border: none;
+    border-radius: 0 0.5rem 0.5rem 0;
     height: 30px;
 }
 
-header nav {
+.navegación {
     font-size: 12px;
     margin-left: 10px;
     padding-bottom: 20px;
 }
 
-header ul li {
+.left-list, .right-list {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-header ul li a {
+.right-list {
+    justify-content: end;
+}
+
+.left-list a, .right-list a {
     text-decoration: none;
     color: #000;
-}
-
-header .form .input {
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
 }
 
 div.burger-menu {
@@ -226,11 +227,23 @@ footer p {
 
 .campo {
     width: 35%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
 }
 
 .relleno {
     width: 50%;
     height: 35px;
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.botones {
+    width: 70px;
+    font-size: 1rem;
 }
 
 .formulario {
@@ -247,12 +260,20 @@ h4 {
 }
 
 @media (min-width: 361px) {
-    header .top-header {
+    .top-header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .logo {
+        width: 35%;
+    }
+    
+    .buscador, .pago {
+        width: 30%;
     }
 
     main section article .description {
@@ -298,36 +319,28 @@ h4 {
         display: none;
     }
 
-    nav {
+    .navegación {
         display: flex;
         justify-content: space-between;
     }
 
-    nav ul {
+    .left-list, .right-list {
         display: flex;
     }
 
     nav li {
-        margin: 0 5px;
+        margin: 0 4px;
     }
 }
 
 @media (min-width: 769px) {
-    header .top-header {
+    .top-header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
         max-width: none;
-    }
-
-    .barra {
-        width: 300px;
-    }
-
-    .submit {
-        width: 30px;
     }
 
     main section div.products article {
@@ -361,12 +374,12 @@ h4 {
         justify-content: space-between;
     }
 
-    nav ul {
+    .left-list, .right-list {
         display: flex;
     }
 
     nav li {
-        margin: 0 20px;
+        margin: 0 10px;
     }
 
     footer {

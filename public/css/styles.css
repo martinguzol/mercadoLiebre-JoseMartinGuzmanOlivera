@@ -41,7 +41,7 @@ header {
     padding: 10px;
 }
 
-.buscador {
+.form {
     display: flex;
     align-items: center;
     width: 50%;
@@ -272,7 +272,7 @@ h4 {
         width: 35%;
     }
     
-    .buscador, .pago {
+    .form, .pago {
         width: 30%;
     }
 
